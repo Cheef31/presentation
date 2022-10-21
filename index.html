@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Presentation</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -19,24 +19,36 @@
 				<section data-markdown>
 					<textarea data-template>
 						## Neuer Branch (aus aktuellem)
+						```shell
 						git checkout -b <branch-name>
+						```
 						---
 						## Taggen
+						```shell [1|2]
 						git tag v1.0.0
 						git push --tags
+						```
 						---
 						## Bestimmte Datei resetten zu HEAD
+						```shell
 						git checkout HEAD -- my-file.txt
+						```
 						---
 						## Alle Dateien adden außer eine
+						```shell
 						git add --all -- ':!src/main/resources/application.properties'
+						```
 						---
 						## Falls vergessen Submodules beim clonen hinzuzufügen
+						```shell [1|2]
 						git submodule init
 						git submodule update
+						```
 						---
 						## Alle Änderungen ziehen und nicht mehr vorhandene lokale Branches löschen
+						```shell
 						git fetch -p
+						```
 					</textarea>
 				  </section>
 			</div>
