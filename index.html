@@ -16,16 +16,29 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Neuer Branch (aus aktuellem)
+						git checkout -b <branch-name>
+						---
+						## Taggen
+						git tag v1.0.0
+						git push --tags
+						---
+						## Bestimmte Datei resetten zu HEAD
+						git checkout HEAD -- my-file.txt
+						---
+						## Alle Dateien adden außer eine
+						git add --all -- ':!src/main/resources/application.properties'
+						---
+						## Falls vergessen Submodules beim clonen hinzuzufügen
+						git submodule init
+						git submodule update
+						---
+						## Alle Änderungen ziehen und nicht mehr vorhandene lokale Branches löschen
+						git fetch -p
+					</textarea>
+				  </section>
 			</div>
 		</div>
 
